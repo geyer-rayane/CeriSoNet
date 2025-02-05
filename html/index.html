@@ -2,85 +2,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Connexion</title>
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-        .login-wrapper {
-            display: flex;
-            align-items: center;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .login-image {
-            width: 300px; /* Même taille que le formulaire */
-            height: auto;
-            border-radius: 8px 0 0 8px;
-        }
-        .login-container {
-            padding: 30px;
-            width: 300px;
-            border-left: 2px solid #ddd; /* Séparation visuelle */
-            border-radius: 0 8px 8px 0;
-        }
-        .login-form h2 {
-            font-family: 'Pacifico', cursive;
-            font-size: 32px;
-            text-align: center;
-            color: #333;
-        }
-        .input-group {
-            margin-bottom: 15px;
-        }
-        .input-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .login-btn {
-            width: 100%;
-            padding: 10px;
-            background-color: #3897f0;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .signup-link {
-            text-align: center;
-            margin-top: 10px;
-        }
-    </style>
 </head>
 <body>
     <div class="login-wrapper">
-        <img src="../img/CeriSoNet.png" alt="Illustration" class="login-image">
-        
-        <div class="login-container">
-            <form class="login-form">
-                <h2>CeriSoNet</h2>
-                <div class="input-group">
-                    <label for="username"></label>
-                    <input type="text" id="username" name="username" placeholder="E-mail" required>
-                </div>
-                <div class="input-group">
-                    <label for="password"></label>
-                    <input type="password" id="password" name="password" placeholder="Mot de passe" required>
-                </div>
-                <button type="submit" class="login-btn">Se connecter</button>
-                <div class="signup-link">
-                    <p>Vous n'avez pas encore de compte ? <a href="">S'inscrire</a></p>
-                </div>
-            </form>
+        <div class="row">
+            <img src="../img/CeriSoNetOnPhone.png" class="login-image">
+            <div class="login-container">
+                <form class="login-form">
+                    <h2>CeriSoNet</h2>
+                    <div class="input-group">
+                        <label for="username"></label>
+                        <input type="text" id="username" name="username" placeholder="E-mail" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password"></label>
+                        <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                    </div>
+                    <button type="submit" class="login-btn">Se connecter</button>
+                    <div class="signup-link">
+                        <p>Vous n'avez pas encore de compte ? <a href="">S'inscrire</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </body>

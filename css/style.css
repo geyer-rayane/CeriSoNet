@@ -2,71 +2,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #ffffff;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    position: relative;
+    margin: 0;
 }
 
 
-.login-container {
-    position: relative;
-    z-index: 1;
-    background-color:transparent;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e7e7e7; /* Bordure grise */
-    border-radius: 0; /* Suppression des bords arrondis */
-    width: 300px;
-}
-
-
-.login-form h2 {
-    text-align: center;
-    margin-bottom: 200px;
-    font-size: 24px;
-    color: #333;
-}
-
-
-.login-wrapper{
-    display : flex;
-    justify-content: center;
-    align-items: center;
-    height: 200vh;
-
+.row {
+    display: flex; /* Affiche les enfants côte à côte */
+    width: 100%;
 }
 
 .login-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Permet à l'image de s'ajuster sans déformation */
+    width: 100%;           /* L'image prend toute la largeur du conteneur */
+    max-width: 400px;      /* Limite la largeur de l'image à 400px */
+    height: auto;          /* Garde les proportions de l'image */
+    object-fit: cover;     /* L'image s'adapte au conteneur sans déformation */
+    margin: 20px auto;     /* Centrer l'image et ajouter de l'espace autour */
+    display: block;        /* Assurer que l'image soit un bloc */
+  }
+  
+
+.login-container {
+    width: 50%;  /* 50% de l'écran pour le formulaire */
+    padding: 30px;
+    border-left: 2px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-content {
+    display: flex;
+    width: 600px; /* Largeur du conteneur global */
+    height: auto;
+}
+
+
+
+
+.login-form h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
 
 .input-group {
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre le contenu horizontalement */
+    align-items: center;
 }
 
 .input-group label {
-    display: block;
     font-size: 14px;
     color: #555;
     margin-bottom: 5px;
-    text-align: center; /* Centrer l'étiquette */
+    text-align: center;
 }
 
 .input-group input {
-    width: 300px; /* Largeur fixe pour centrer les champs */
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -79,29 +90,18 @@ body {
     outline: none;
 }
 
-
-
-
-
-
-
-
 .login-btn {
     width: 100%;
     padding: 10px;
     background-color: #3897f0;
-    color: #fff;
+    color: white;
     border: none;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 10px;
     transition: background-color 0.3s;
-    border-radius: 10px; /* Arrondir les bords */
 }
-
-
-
-
 
 .signup-link {
     text-align: center;
@@ -117,16 +117,13 @@ body {
     text-decoration: underline;
 }
 
-
-
-
 #background-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Met le canvas en arrière-plan */
+    z-index: -1;
     overflow: hidden;
 }
 
